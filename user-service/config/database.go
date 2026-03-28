@@ -13,7 +13,7 @@ type Postgres struct {
 	DB *gorm.DB
 }
 
-func (cfg Config) Connection() (*Postgres, error) {
+func (cfg Config) ConnectionPostgres() (*Postgres, error) {
 	dbConnString := fmt.Sprintf("postgres://%s:%s@%s:%s/%s",
 		cfg.Psql.User,
 		cfg.Psql.Password,
